@@ -1,5 +1,11 @@
+####################################################################################
+#     >>  Maintained by team Vitunix (https://github.com/vitunix)  <<              #
+#             >> A Simple and lightweight Arch based distro <<                     #
+#             -----> Mail us at (vitunix@proton.me) <-----                         #
+#     ----> configured by heapbytes (https://github.com/heapbytes) <-----          #
+####################################################################################
 #
-# Developer : G0urav <https://github.com/heapbytes>
+# Developer: G0urav <https://github.com/heapbytes>
 #
 
 pkgname=vitunix-bspwm
@@ -10,6 +16,7 @@ arch=('any')
 url="https://github.com/vitunix/vitunix-bspwm"
 license=('GPL3')
 install=${pkgname}.install
+
 depends=(
 	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
 	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
@@ -33,15 +40,15 @@ package() {
 	local sxhkd_dir=${config_dir}/sxhkd
   local vitunix_dir=${config_dir}/vitunix-bin
 
-	mkdir -p "$config_dir" "$bspwm_dir" "$dunst_dir" "$sxhkd_dir"
+	mkdir -p "$config_dir" "$bspwm_dir" "$dunst_dir" "$sxhkd_dir" "$vitunix_dir"
 
 	cp -r ${srcdir}/*	"$config_dir"
 
-	chmod +x "$vitunix_dir"/*
+	chmod +x "$vitunix_dir"/*.sh
 	# chmod +x "$bspwm_dir"/rofi/bin/*
 
 	install -Dm 755 ${srcdir}/bspwm/bspwmrc   			"$bspwm_dir"/bspwmrc
-	# install -Dm 644 ${srcdir}/picom/picom.conf   		"$bspwm_dir"/picom.conf
+	#install -Dm 644 ${srcdir}/picom/picom.conf   		"${srcdir}"/picom.conf
 	# install -Dm 644 ${srcdir}/dunst/dunstrc   			"$config_dir"/dunst/dunstrc
 	install -Dm 644 ${srcdir}/bspwm/sxhkdrc        	    "$config_dir"/sxhkd/sxhkdrc
 	
