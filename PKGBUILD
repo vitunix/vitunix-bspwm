@@ -18,12 +18,11 @@ license=('GPL3')
 install=${pkgname}.install
 
 depends=(
-	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'geany' 'xdo'
+	'bspwm' 'sxhkd' 'alacritty' 'thunar' 'neovim' 'xdo'
 	'rofi' 'polybar' 'dunst' 'mpd' 'mpc' 'maim' 'xqp'
-	'xclip' 'viewnior' 'feh' 'ksuperkey' 'betterlockscreen'
+	'xclip' 'feh' 'ksuperkey' 'betterlockscreen'
 	'xfce4-power-manager' 'xsettingsd' 'xorg-xsetroot'
-	'wmname' 'xsensors' 'stacer' 'powershell-preview-bin'
-	'jgmenu' 'lsd'
+	'wmname'
 )
 
 prepare() {
