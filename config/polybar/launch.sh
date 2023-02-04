@@ -16,5 +16,5 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Starting out the polybar
-polybar -q main -c "/home/lenon/proj/test/test-bspwm/config/polybar/shapes/config.ini" &	
+polybar -q main -c "$HOME/.config/polybar/shapes/config.ini" &	
 

@@ -42,5 +42,5 @@ xsetroot -cursor_name left_ptr
 picom -f &
 
 # For betterlockscreen, this would run only once.
-$HOME/.config/vitunix-bin/lock-check.sh
+#$HOME/.config/vitunix-bin/lock-check.sh
 
