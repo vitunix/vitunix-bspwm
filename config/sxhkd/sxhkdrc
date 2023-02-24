@@ -74,7 +74,7 @@ ctrl + alt + {r,h,b,n,v}
 
 # Lockscreen
 ctrl + alt + l
-    bsplock
+    betterlockscreen --dim
 
 # music art
 super + shift + m
