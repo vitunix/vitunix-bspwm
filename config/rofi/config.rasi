@@ -1,15 +1,81 @@
+@theme "/dev/null"
+
+* {
+	bg: #141414;
+	background-color: @bg;
+}
+
+
 configuration {
-modi: "window,drun,ssh";
-font: "Iosevka Nerd Font 12";
-/*	location: 0;*/
-/*	yoffset: 0;*/
-/*	xoffset: 0;*/
-show-icons: true;
-icon-theme: "Deepin";
-drun-display-format: "{name}";
-display-window: "Windows";
-/* display-ssh: "SSH";*/
-display-drun: "Search:  ";
+	show-icons: true;
+		icon-theme: "Papirus";
+	location: 0;
+	font: "JetBrainsMono Nerd Font 12";	
+	display-drun: "Search: ";
+}
+
+window { 
+  border-radius:12px;
+	width: 50%;
+	transparency: "real";
+	orientation: vertical;
+  border-width: 10px;
+	border-color: #fff;
+}
+
+mainbox {
+	children: [inputbar, listview];
+}
+
+
+// ELEMENT
+// -----------------------------------
+
+element {
+	padding: 10 10;
+	text-color: #fcfcfc;
+}
+
+element selected {
+	background-color: #6d739c;
+  border-radius: 15px;
+}
+
+element-text {
+	background-color: inherit;
+	text-color: inherit;
+}
+
+element-icon {
+	size: 16 px;
+	background-color: inherit;
+	padding: 0 6 0 0;
+	alignment: vertical;
+}
+
+listview {
+	columns: 2;
+	lines: 9;
+	padding: 18 10;
+	fixed-height: false;
+	fixed-columns: true;
+	fixed-lines: true;
+	border: 0 10 6 10;
+}
+
+// INPUT BAR 
+//------------------------------------------------
+
+entry {
+	text-color: #EFE7DD;
+	padding: 10 10 0 0;
+	margin: 0 -2 0 0;
+}
+
+
+prompt {
+  text-color: #a89984;
+  padding: 10 6 0 10;
+  margin: 0 -2 0 0;
 
 }
-@theme "vitunix.rasi"
