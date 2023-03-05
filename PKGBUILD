@@ -9,8 +9,8 @@
 #
 
 pkgname=vitunix-bspwm
-pkgver=1.0
-pkgrel=1
+pkgver=1.1
+pkgrel=2
 pkgdesc="BSPWM Config For Vitunix"
 arch=('any')
 url="https://github.com/vitunix/vitunix-bspwm"
@@ -44,7 +44,6 @@ package() {
 	cp -r ${srcdir}/*	"$config_dir"
 
 	chmod +x "$vitunix_dir"/*.sh
-	# chmod +x "$bspwm_dir"/rofi/bin/*
 
 	install -Dm 755 ${srcdir}/bspwm/bspwmrc   			"$bspwm_dir"/bspwmrc
 	#install -Dm 644 ${srcdir}/picom/picom.conf   		"${srcdir}"/picom.conf
