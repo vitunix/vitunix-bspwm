@@ -5,12 +5,6 @@
 #             -----> Mail us at (vitunix@proton.me) <-----                           #
 #     ----> configured by heapbytes (https://github.com/heapbytes) <-----            #
 ####################################################################################
-##---------- Toggle right click context menu. ----------##
-
-
-# Toggle right click context menu.
-~button3
-  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run
 
 ##---------- Keybindings for bspwm ----------##
 
@@ -23,16 +17,6 @@ bspterm=kitty
 super + shift + Return
 	bspterm -float
 
-# Terminal (fullscreen)
-super + t
-	bspterm -fullscreen
-
-##---------- Rofi Launcher & Menus ----------##
-
-# Rofi App Launcher
-#alt + F1
-  #sh ~/.config/bspwm/rofi/bin/launcher
-
 super + h
   thunar
 
@@ -40,17 +24,6 @@ super + h
 super + n
 	nmd
 
-# Rofi Themes Menu
-ctrl + alt + t
-	sh ~/.config/bspwm/rofi/bin/themes
-
-# Rofi Menus/Applets
-super + {m,x,r,s,i}
-	sh ~/.config/bspwm/rofi/bin/{mpd,powermenu,asroot,screenshot,network}
-
-# Rofi windows
-ctrl +shift + w
-  sh ~/.config/bspwm/rofi/bin/{windows}
 ##---------- Applications ----------##
 
 #browser
@@ -60,31 +33,17 @@ super + w
 # Open/close dashboard
 super + d
 	rofi -show drun
-  #sh ~/.config/eww/dashboard/launch_dashboard
-
-# Launch Apps
-super + shift + {g,e}
-	{google-chrome-stable,geany}
 
 # Terminal Apps
 ctrl + alt + {r,h,b,n,v}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {ranger,htop,bashtop,nvim,vim}
+	kitty -e {ranger,htop,bashtop,nvim,vim}
 
-# Color Picker
-#super + p
-#	colorPicker
 
 # Lockscreen
 ctrl + alt + l
     betterlockscreen --lock dim
 
-# music art
-super + shift + m
-	music --albumArtCover
 
-# udeler
-super + u
-	cd ~/Public/udemy-downloader-gui && npm start
 
 ##---------- System Keys ----------##
 

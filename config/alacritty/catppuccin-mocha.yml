@@ -1,12 +1,6 @@
-####################################################################################
-#     >>  Maintained by team Vitunix (https://github.com/vitunix)  <<              #
-#             >> A Simple and unique Arch based distro <<                          #
-#             -----> Mail us at (vitunix@proton.me) <-----                         #
-#     ----> configured by heapbytes (https://github.com/heapbytes) <-----          #
-####################################################################################
 colors:
     primary:
-        background: "#1E1E2E" # base
+        background: "#0a031f" # base
         foreground: "#CDD6F4" # text
         # Bright and dim foreground colors
         dim_foreground: "#CDD6F4" # text
