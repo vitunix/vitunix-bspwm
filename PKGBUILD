@@ -37,19 +37,22 @@ package() {
 	local bspwm_dir=${config_dir}/bspwm
 	local dunst_dir=${config_dir}/dunst
 	local sxhkd_dir=${config_dir}/sxhkd
-  local vitunix_dir=${config_dir}/vitunix-bin
-  local ranger_dir=${config_dir}/ranger
+	local vitunix_dir=${config_dir}/vitunix-bin
+  	local ranger_dir=${config_dir}/ranger
 
 	mkdir -p "$config_dir" "$bspwm_dir" "$dunst_dir" "$sxhkd_dir" "$vitunix_dir" "$ranger_dir"
 
 	cp -r ${srcdir}/*	"$config_dir"
 
 	chmod +x "$vitunix_dir"/*.sh
-  chmod 755 "$ranger_dir/scope.sh"
+  	chmod 755 "$ranger_dir/scope.sh"
+	chmod +x "$vitunix_dir/"runc
+  	chmod +x "$vitunix_dir"/runjava
+	
 
-	install -Dm 755 ${srcdir}/bspwm/bspwmrc   			"$bspwm_dir"/bspwmrc
+	install -Dm 755 ${srcdir}/bspwm/bspwmrc   		"$bspwm_dir"/bspwmrc
 	#install -Dm 644 ${srcdir}/picom/picom.conf   		"${srcdir}"/picom.conf
-	# install -Dm 644 ${srcdir}/dunst/dunstrc   			"$config_dir"/dunst/dunstrc
-	install -Dm 644 ${srcdir}/bspwm/sxhkdrc        	    "$config_dir"/sxhkd/sxhkdrc
+	#install -Dm 644 ${srcdir}/dunst/dunstrc   		"$config_dir"/dunst/dunstrc
+	install -Dm 644 ${srcdir}/bspwm/sxhkdrc        	    	"$config_dir"/sxhkd/sxhkdrc
 	
 }
