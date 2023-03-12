@@ -1,0 +1,6 @@
+#!/bin/sh
+
+#---- Last edited by: G0urav <https://github.com/heapbytes\>
+#---- This prgm will help all linux users to automate the compilation command and save time.
+
+gcc "$1" -o "${1%.c}" && "./${1%.c}" && rm "${1%.c}"
