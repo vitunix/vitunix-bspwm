@@ -1,47 +1,38 @@
-## Configuration for Alacritty, the GPU enhanced terminal emulator.
-## It's a very basic and simple config file, for full configuration...
-## See, /usr/share/doc/alacritty/example/alacritty.yml
-
-## Import files (Colors, Fonts, Etc)
-import:
-  - ~/.config/alacritty/catppuccin-mocha.yml
-    #- ~/.config/bspwm/alacritty/colors.yml
-    #- ~/.config/bspwm/alacritty/fonts.yml
-
-## Set environment variables
-env:
-  TERM: alacritty
-  WINIT_X11_SCALE_FACTOR: '1.0'
-
-## Terminal window settings
 window:
-  dimensions:
-    columns: 114
-    lines: 40
-
   padding:
-    x: 10
-    y: 10
+   x: 8
+   y: 8
+  opacity: 0.97
 
-  decorations: full
-  startup_mode: Windowed
-  dynamic_title: true
+font:
+  size: 12
+  normal:
+    family: JetBrainsMono Nerd Font
+    # style:  Regular
 
-## scrolling
-  history: 10000
-  multiplier: 3
+colors:
 
-## Background opacity
-# background_opacity: 1.0
-window.opacity: 0.95
+  primary:
+    background: '#0e090f'
+    foreground: '#dedede'
 
-## Cursor
-cursor:
-  style:
-    shape: Block
-    blinking: On
+  normal:
+    black:   '#15121c'
+    red:     '#cb5760'
+    green:   '#999f63'
+    yellow:  '#d4a067'
+    blue:    '#6c90a8'
+    magenta: '#776690'
+    cyan:    '#528a9b'
+    white:   '#eeffff'
 
-  unfocused_hollow: false
+  bright:
+    black:   '#727480'
+    red:     '#cb5760'
+    green:   '#999f63'
+    yellow:  '#d4a067'
+    blue:    '#6c90a8'
+    magenta: '#776690'
+    cyan:    '#528a9b'
+    white:   '#eeffff'
 
-## Live config reload
-live_config_reload: true
